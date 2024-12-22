@@ -1,2 +1,7 @@
-assets*
+/assets/*
+
+!/assets/favicon.svg
+!/assets/favicon-16x16.png
+!/assets/favicon-32x32.png
+
 *DS_Store
