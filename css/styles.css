@@ -13,8 +13,10 @@ body {
   padding: 25px 50px 10px;
 }
 
-.my_bottom_padding {
-  padding: 0px 0px 120px;
+.my_footer {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0px 50px -40px;
 }
 
 h1 {
@@ -42,12 +44,20 @@ h1 {
   margin-left: -3px;
 }
 
-/* Container around content */
+.left {
+  left: 0;
+}
+
 .container {
-  padding: 10px 40px;
+  padding: 10px 40px 120px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
+  left: 0;
+}
+
+.last_container {
+  padding: 10px 40px 0px 40px;
 }
 
 /* The circles on the timeline */
@@ -62,11 +72,6 @@ h1 {
   top: 15px;
   border-radius: 50%;
   z-index: 1;
-}
-
-/* Place the container to the left */
-.left {
-  left: 0;
 }
 
 /* Place the container to the right */
@@ -115,35 +120,33 @@ h1 {
   border-radius: 6px;
 }
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
+  /* Adjust the timeline position */
   .timeline::after {
-    left: 31px;
+    left: 25px; /* Ensure it aligns with the circles */
   }
 
-  /* Full-width containers */
   .container {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+    padding-left: 50px;
+    padding-right: 20px;
   }
 
-  /* Make sure that all arrows are pointing leftwards */
+  /* Align circles for left and right containers */
+  .left::after,
+  .right::after {
+    left: 8px;
+  }
+
+  /* Ensure arrows point left for all containers */
   .container::before {
-    left: 60px;
+    left: 40px;
     border: medium solid #f7faef;
     border-width: 10px 10px 10px 0;
     border-color: transparent #f7faef transparent transparent;
   }
 
-  /* Make sure all circles are at the same spot */
-  .left::after,
-  .right::after {
-    left: 15px;
-  }
-
-  /* Make all right containers behave like the left ones */
+  /* Align right containers to behave like left containers */
   .right {
     left: 0%;
   }
@@ -193,4 +196,47 @@ h1 {
   top: 0;
   left: 0;
   z-index: -1; /* Ensure it stays behind other content */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#backToTop {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#backToTop.show {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dc143c;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.3s ease-out;
+}
+
+.back-to-top span {
+  color: #fff;
+  font-size: 2rem;
+  transition: 0.3s ease-out;
+}
+
+.back-to-top:hover {
+  background-color: #be1a3b;
+}
+.back-to-top:hover span {
+  transform: translateY(-4px);
 }
