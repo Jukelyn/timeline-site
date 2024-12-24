@@ -117,7 +117,7 @@ h1 {
   padding: 20px 30px;
   background-color: #f7faef;
   position: relative;
-  border-radius: 6px;
+  border-radius: 16px;
 }
 
 @media screen and (max-width: 600px) {
@@ -237,6 +237,42 @@ html {
 .back-to-top:hover {
   background-color: #be1a3b;
 }
+
 .back-to-top:hover span {
   transform: translateY(-4px);
+}
+
+.snowflake-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.snowflake {
+  position: fixed;
+  top: -20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: snow;
+  animation: snowfall 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(150vh) rotate(360deg);
+  }
+}
+@keyframes sway {
+  0%,
+  100% {
+    transform: translateX(calc(-1 * var(--sway-amplitude)));
+  }
+  50% {
+    transform: translateX(var(--sway-amplitude));
+  }
 }
