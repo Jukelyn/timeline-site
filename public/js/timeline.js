@@ -139,6 +139,10 @@ timelineData.forEach((item, index) => {
     container.classList.add("right");
   }
 
+  if (index === timelineData.length - 1) {
+    container.classList.add("last_container");
+  }
+
   const content = document.createElement("div");
   content.classList.add("content");
 
