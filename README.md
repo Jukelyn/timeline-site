@@ -9,6 +9,8 @@ This repository contains a timeline project that showcases events or milestones 
 - **fade.js**: JavaScript that handles the fade-in and slide-up animations for the timeline containers on scroll.
 - **tiemline.js**: JavaScript that handles the timeline cards, inputing the data from timelineData.json one directory level up.
 - **snow.js**: JavaScript for snow effect.
+- **back-to-top.js**: Simple button for moving back to the top of the page.
+- **particles.js**: For particle background theme when the snow theme is not is use.
 
 ## Features
 
