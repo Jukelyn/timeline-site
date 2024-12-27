@@ -42,8 +42,7 @@
       <h1>our timeline.</h1>
     </div>
 
-    <div class="timeline">
-    </div>
+    <div class="timeline"></div>
     <script src="js/timeline.js"></script>
 
     <footer class="my_footer">
@@ -54,5 +53,13 @@
       <span class="material-icons">arrow_upward</span>
     </a>
     <script src="js/back-to-top.js"></script>
+
+    <script>
+      // hack-y way to get around the bug where I need to scroll for the timeline
+      // to show up
+      window.setTimeout(function () {
+        window.scrollTo({ top: 1, behavior: "smooth" }); // Scroll to 1px
+      }, 500); // Wait 0.5s before scrolling
+    </script>
   </body>
 </html>
