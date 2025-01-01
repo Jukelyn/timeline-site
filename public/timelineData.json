@@ -124,5 +124,17 @@
     "date": "dec 7",
     "description": "are you asking me on a date?",
     "image": "assets/dec7.jpg"
+  },
+  {
+    "title": "our first christmas!",
+    "date": "dec 25",
+    "description": "it was so much fun omg 🥰 ft. Norma + Jaly",
+    "image": "assets/dec25.jpg"
+  },
+  {
+    "title": "2025!",
+    "date": "jan 1",
+    "description": "what a great way to start off the new year!",
+    "image": "assets/jan1.jpg"
   }
 ]
