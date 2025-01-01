@@ -8,3 +8,4 @@ venv
 !/public/assets/favicon-32x32.png
 
 *DS_Store
+/public/timelineData.json
