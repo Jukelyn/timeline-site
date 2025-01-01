@@ -1,4 +1,4 @@
-# Xmas Project 2024
+# Timeline Site (was Xmas Project 2024)
 
 This repository contains a timeline project that showcases events or milestones along with images. The project uses HTML, CSS, and JavaScript to create an interactive scrolling timeline with fade-in effects and image transitions.
 
