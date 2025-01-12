@@ -1,28 +1,29 @@
-# name: CI-SFTP
+name: CI-SFTP
 
-# on:
-#   push:
-#     branches: [main]
+on:
+  push:
+    branches: [main]
 
-#   workflow_dispatch:
+  workflow_dispatch:
 
-# jobs:
-#   deploy-via-sftp:
-#     runs-on: ubuntu-latest
-#     steps:
-#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#       - uses: actions/checkout@v4
+jobs:
+  deploy-via-sftp:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
 
-#       - name: SFTP Deploy
-#         uses: wlixcc/SFTP-Deploy-Action@v1.2.5
-#         with:
-#           username: ${{ secrets.SSH_USER }}
-#           server: ${{ secrets.SSH_SERVER }}
-#           port: ${{ secrets.SSH_SERVER_PORT }}
-#           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
+        with:
+          username: ${{ secrets.SSH_USER }}
+          server: ${{ secrets.SSH_SERVER }}
+          port: ${{ secrets.SSH_SERVER_PORT }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-#           local_path: ./* # On Github
-#           remote_path: ${{ secrets.REMOTE_PATH }} # On server
-#           delete_remote_files: true
-#           # sftp args
-#           args: "-o ConnectTimeout=5"
+          local_path: ./* # On Github
+          remote_path: ${{ secrets.REMOTE_PATH }} # On server
+          # delete_remote_files: true
+          
+          # sftp args
+          args: "-o ConnectTimeout=5"
