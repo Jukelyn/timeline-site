@@ -26,4 +26,4 @@ jobs:
           # delete_remote_files: true
           
           # sftp args
-          args: "-o ConnectTimeout=5"
+          args: "-o ConnectTimeout=5 -vvv"
