@@ -1,6 +1,14 @@
-# Timeline Site (was Xmas Project 2024)
+# Timeline Site
 
-This repository contains a timeline project that showcases events or milestones along with images. The project uses HTML, CSS, and JavaScript to create an interactive scrolling timeline with fade-in effects and image transitions.
+This repository contains a timeline project that showcases events or milestones along with images. The project uses HTML, CSS, and JavaScript to create an interactive scrolling timeline with fade-in effects and image transitions. (replace this info)
+
+## Todo
+
+- Heart theme animated background to replace snow soon
+- Add footer with banner with link to github and/or code showcase
+- Use image CDN for images with optimized sizes for better loading
+- Prerendering + preloading images
+- General optimizations
 
 ## Project Structure
 
@@ -16,12 +24,3 @@ This repository contains a timeline project that showcases events or milestones 
 - **Generated Timeline Cards**: Timeline events are stored in a json file and the style is predefined and then populated to the main html file.
 - **Responsive Design**: The timeline is fully responsive, ensuring it looks good on mobile devices as well as larger screens.
 - **Fade & Transition Effects**: Timeline containers fade and slide into view when they become visible on the screen.
-
-
-### Todo
-
-- Heart theme animated background to replace snow soon
-- Add footer with banner with link to github and/or code showcase
-- Use image CDN for images with optimized sizes for better loading
-- Prerendering + preloading images
-- General optimizations
