@@ -2,10 +2,5 @@
 .vscode*
 
 venv
-/public/assets/*
-!/public/assets/favicon.svg
-!/public/assets/favicon-16x16.png
-!/public/assets/favicon-32x32.png
 
 *DS_Store
-/public/timelineData.json

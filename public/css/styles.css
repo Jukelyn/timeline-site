@@ -155,8 +155,8 @@ h1 {
 .container img {
   display: block;
   max-width: 100%;
-  width: 420px;
-  height: auto;
+  /* width: 420px;
+  height: auto; */
   margin: 10px auto;
 }
 
@@ -241,6 +241,47 @@ html {
 .back-to-top:hover span {
   transform: translateY(-4px);
 }
+
+#scrollToBottom {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#scrollToBottom.show {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.scroll-to-bottom {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dc143c;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.3s ease-out;
+}
+
+.scroll-to-bottom span {
+  color: #fff;
+  font-size: 2rem;
+  transition: 0.3s ease-out;
+}
+
+.scroll-to-bottom:hover {
+  background-color: #be1a3b;
+}
+
+.scroll-to-bottom:hover span {
+  transform: translateY(-4px);
+}
+
 
 .snowflake-area {
   position: relative;

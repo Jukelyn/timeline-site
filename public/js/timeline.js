@@ -13,8 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
           container.classList.add("right");
         }
 
+        if (index === 0) {
+          container.classList.add("visible");
+        }
+
+        if (index === 1) {
+          container.classList.add("transitioning");
+        }
+        
         if (index === data.length - 1) {
           container.classList.add("last_container");
+          container.id = "last_container";
         }
 
         const content = document.createElement("div");
@@ -31,6 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const image = document.createElement("img");
         image.src = item.image;
         image.alt = item.title;
+        image.loading = "lazy";
+        image.width = 400;
+        image.style.height = "auto";
 
         content.appendChild(image);
 

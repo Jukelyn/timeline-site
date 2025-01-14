@@ -23,12 +23,6 @@
       sizes="16x16"
     />
     <link href="css/styles.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/particles.js"></script> -->
     <script src="js/fade.js"></script>
   </head>
 
@@ -49,17 +43,67 @@
       <h1>with many more adventures to come...</h1>
     </footer>
 
-    <a href="#" class="back-to-top" id="backToTop">
-      <span class="material-icons">arrow_upward</span>
+    <a href="/" class="back-to-top" id="backToTop">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#e8eaed"
+      >
+        <path
+          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
+        />
+      </svg>
     </a>
-    <script src="js/back-to-top.js"></script>
 
     <script>
-      // hack-y way to get around the bug where I need to scroll for the timeline
-      // to show up
-      window.setTimeout(function () {
-        window.scrollTo({ top: 1, behavior: "smooth" }); // Scroll to 1px
-      }, 500); // Wait 0.5s before scrolling
+      document.addEventListener("scroll", () => {
+        const backToTopButton = document.getElementById("backToTop");
+        if (window.scrollY > 300) {
+          backToTopButton.classList.add("show");
+        } else {
+          backToTopButton.classList.remove("show");
+        }
+
+        const scrollToBottomButton = document.getElementById("scrollToBottom");
+        const scrollableHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+
+        if (window.scrollY > scrollableHeight * 0.9) {
+          // 90%
+          scrollToBottomButton.classList.remove("show");
+        } else {
+          scrollToBottomButton.classList.add("show");
+        }
+      });
+
+      backToTopButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      scrollToBottomButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: "smooth",
+        });
+      });
     </script>
+
+    <a href="#last_container" class="scroll-to-bottom" id="scrollToBottom">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#e8eaed"
+      >
+        <path
+          d="M520-800v487l224-224 56 57-320 320-320-320 56-57 224 224v-487h80Z"
+        />
+      </svg>
+    </a>
   </body>
 </html>
