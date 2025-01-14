@@ -24,11 +24,10 @@
     />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="js/fade.js"></script>
+
   </head>
 
   <body>
-    <!-- <div id="particles-js"></div> -->
-    <!-- <script src="js/particles.js"></script> -->
     <div class="snowfall-animation"></div>
     <script src="js/snow.js"></script>
 
@@ -60,6 +59,7 @@
     <script>
       document.addEventListener("scroll", () => {
         const backToTopButton = document.getElementById("backToTop");
+
         if (window.scrollY > 300) {
           backToTopButton.classList.add("show");
         } else {
@@ -77,6 +77,9 @@
           scrollToBottomButton.classList.add("show");
         }
       });
+
+      const backToTopButton = document.getElementById("backToTop");
+      const scrollToBottomButton = document.getElementById("scrollToBottom");
 
       backToTopButton.addEventListener("click", (e) => {
         e.preventDefault();

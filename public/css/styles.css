@@ -195,7 +195,7 @@ h1 {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* Ensure it stays behind other content */
+  z-index: -1000; /* Ensure it stays behind other content */
 }
 
 html {
