@@ -3,18 +3,27 @@
     "title": "title 1",
     "date": "date 1",
     "description": "description 1",
-    "image": "assets/path1.jpg"
+    "imageSource": "link",
+    "imageSourceSmall": "link",
+    "imageSourceMedium": "link",
+    "imageSourceLarge": "link"
   },
   {
     "title": "title 2",
     "date": "date 2",
     "description": "description 2",
-    "image": "assets/path2.jpg"
+    "imageSource": "link",
+    "imageSourceSmall": "link",
+    "imageSourceMedium": "link",
+    "imageSourceLarge": "link"
   },
   {
     "title": "title 2",
     "date": "date 3",
     "description": "description 3",
-    "image": "assets/path3.jpg"
+    "imageSource": "link",
+    "imageSourceSmall": "link",
+    "imageSourceMedium": "link",
+    "imageSourceLarge": "link"
   }
 ]

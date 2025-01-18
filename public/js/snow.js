@@ -10,12 +10,13 @@ const letItSnow = () => {
 
   for (let i = 0; i < getSnowflakeCount(); i++) {
     const snowflake = document.createElement("div");
-    snowflake.classList.add("snowflake");
     const randomSize = Math.random() * 4 + 1;
     const randomDuration = Math.random() * 16 + 8;
     const randomXPosition = Math.random() * 100;
     const randomDelay = Math.random() * 6;
     const randomOpacity = Math.random() * 0.2 + 0.4;
+
+    snowflake.classList.add("snowflake");
     snowflake.style.left = `${randomXPosition}%`;
     snowflake.style.animationDuration = `${randomDuration}s`;
     snowflake.style.width = `${randomSize}px`;
@@ -24,4 +25,5 @@ const letItSnow = () => {
     snowflakeArea.appendChild(snowflake);
   }
 };
+
 letItSnow();

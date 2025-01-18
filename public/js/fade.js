@@ -1,3 +1,10 @@
+function initializeVisibility() {
+  const firstContainer = document.querySelector(".timeline .container");
+  if (firstContainer) {
+    firstContainer.classList.add("visible");
+  }
+}
+
 function handleScroll() {
   const containers = document.querySelectorAll(".timeline .container");
   const windowHeight =
@@ -27,16 +34,10 @@ function handleScroll() {
   });
 }
 
-function initializeVisibility() {
-  const firstContainer = document.querySelector(".timeline .container");
-  if (firstContainer) {
-    firstContainer.classList.add("visible");
-  }
-}
-
 // Initialize visibility on page load and attach the scroll event listener
 document.addEventListener("DOMContentLoaded", () => {
   initializeVisibility();
   handleScroll(); // Ensure the last container is handled on load
 });
+
 document.addEventListener("scroll", handleScroll);
