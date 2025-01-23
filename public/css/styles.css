@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #2e2e3a;
   font-family: "Courier New", Courier, monospace;
@@ -116,14 +120,16 @@ h1 {
 .content {
   padding: 20px 30px;
   background-color: #f7faef;
-  position: relative;
+  position: static;
   border-radius: 16px;
 }
 
 @media screen and (max-width: 600px) {
+
   /* Adjust the timeline position */
   .timeline::after {
-    left: 25px; /* Ensure it aligns with the circles */
+    left: 25px;
+    /* Ensure it aligns with the circles */
   }
 
   .container {
@@ -165,6 +171,7 @@ h1 {
   .container img {
     margin-top: 20px;
   }
+
   .my_bottom_padding {
     padding: 0px 0px 60px;
   }
@@ -195,7 +202,8 @@ h1 {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1000; /* Ensure it stays behind other content */
+  z-index: -1000;
+  /* Ensure it stays behind other content */
 }
 
 html {
@@ -304,15 +312,19 @@ html {
   0% {
     transform: translateY(0) rotate(0);
   }
+
   100% {
     transform: translateY(150vh) rotate(360deg);
   }
 }
+
 @keyframes sway {
+
   0%,
   100% {
     transform: translateX(calc(-1 * var(--sway-amplitude)));
   }
+
   50% {
     transform: translateX(var(--sway-amplitude));
   }
