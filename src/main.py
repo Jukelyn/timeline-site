@@ -19,7 +19,7 @@ def get_image_filenames() -> list[str]:
         if file.endswith('.jpg'):
             filenames.append(os.path.splitext(file)[0])
 
-    return filenames
+    return sorted(filenames)
 
 
 images = get_image_filenames()
