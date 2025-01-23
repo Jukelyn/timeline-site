@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         image.loading = "lazy";
         image.width = 400;
         image.style.height = "auto";
+        
         // Set up srcset for responsive image sources
         image.srcset = `${imageSmall} 400w, ${imageMedium} 800w, ${imageLarge} 1200w`;
 
