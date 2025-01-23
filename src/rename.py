@@ -20,36 +20,36 @@ MONTHS = {
 }
 
 
-# def replace_month_in_filename(directory):  # pylint: disable=C0116
-#     # Change from month to the month number
-#     for filename in os.listdir(directory):
-#         if filename.lower().endswith(('.jpg', '.jpeg')):
-#             for month, month_num in MONTHS.items():
-#                 if month in filename.lower():
-#                     new_name = filename.lower().replace(month, month_num)
-#                     new_path = os.path.join(directory, new_name)
-#                     old_path = os.path.join(directory, filename)
-#                     os.rename(old_path, new_path)
-#                     print(f"Renamed {filename} to {new_name}")
-#                     break
+def replace_month_in_filename(directory):  # pylint: disable=C0116
+    # Change from month to the month number
+    for filename in os.listdir(directory):
+        if filename.lower().endswith(('.jpg', '.jpeg')):
+            for month, month_num in MONTHS.items():
+                if month in filename.lower():
+                    new_name = filename.lower().replace(month, month_num)
+                    new_path = os.path.join(directory, new_name)
+                    old_path = os.path.join(directory, filename)
+                    os.rename(old_path, new_path)
+                    print(f"Renamed {filename} to {new_name}")
+                    break
 
 
 # replace_month_in_filename("./images")
 
 
-# def add_year_to_filename(directory):  # pylint: disable=C0116
-#     # If filename does not have "_2025", change to start with 2024
-#     # else if filename does have "_2025", change to start with 2025.
-#     for filename in os.listdir(directory):
-#         if filename.lower().endswith(('.jpg', '.jpeg')):
-#             filepath = os.path.join(directory, filename)
-#             if "_2025" in filename:
-#                 new_name = "2025" + filename
-#             else:
-#                 new_name = "2024" + filename
-#             new_path = os.path.join(directory, new_name)
-#             os.rename(filepath, new_path)
-#             print(f"Renamed {filename} to {new_name}")
+def add_year_to_filename(directory):  # pylint: disable=C0116
+    # If filename does not have "_2025", change to start with 2024
+    # else if filename does have "_2025", change to start with 2025.
+    for filename in os.listdir(directory):
+        if filename.lower().endswith(('.jpg', '.jpeg')):
+            filepath = os.path.join(directory, filename)
+            if "_2025" in filename:
+                new_name = "2025" + filename
+            else:
+                new_name = "2024" + filename
+            new_path = os.path.join(directory, new_name)
+            os.rename(filepath, new_path)
+            print(f"Renamed {filename} to {new_name}")
 
 
 # add_year_to_filename("./images")
@@ -86,7 +86,7 @@ def rename_images_with_sequence(directory):  # pylint: disable=C0116
             print(f"Renamed {filename} to {new_name}")
 
 
-rename_images_with_sequence("./images")
+# rename_images_with_sequence("./images")
 
 
 # def rename_images_with_sequence(directory):
@@ -114,5 +114,4 @@ rename_images_with_sequence("./images")
 #             date_groups[file_date] += 1
 
 
-# # Replace with your directory path
 # rename_images_with_sequence("images")

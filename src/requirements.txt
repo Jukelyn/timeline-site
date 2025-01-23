@@ -1,0 +1,4 @@
+libthumbor==2.0.2
+pycrypto==2.6.1
+python-dotenv==1.0.1
+six==1.17.0
