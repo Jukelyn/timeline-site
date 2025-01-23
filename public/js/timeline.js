@@ -41,19 +41,24 @@ document.addEventListener("DOMContentLoaded", () => {
         // "https://cdn.jukelyn.com/unsafe/400x0/example.jpg"
         // const imageBaseName = item.imageSource.replace(/\.[^/.]+$/, ""); // Match, with dir, no extension
         // const imageExtension = item.imageSource.split(".").pop(); // extension
-        const imageNoDir = item.imageSource.split("/").pop(); // Match, no dir, with extension
-        image.src = item.imageSource
+        // const imageNoDir = item.imageSource.split("/").pop(); // Match, no dir, with extension
+        image.src = item.imageSource;
         // image.src = `https://cdn.jukelyn.com/unsafe/400x0/${imageNoDir}`;
 
         imageSmall = item.imageSourceSmall;
         imageMedium = item.imageSourceMedium;
-        imageLarge = item.imageSourceLarge; 
+        imageLarge = item.imageSourceLarge;
 
         image.alt = item.title;
         image.loading = "lazy";
+        if (index < 3) {
+          // first 3 aren't lazy loaded
+          image.loading = "eager";
+        }
+
         image.width = 400;
         image.style.height = "auto";
-        
+
         // Set up srcset for responsive image sources
         image.srcset = `${imageSmall} 400w, ${imageMedium} 800w, ${imageLarge} 1200w`;
 
