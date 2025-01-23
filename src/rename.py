@@ -58,6 +58,7 @@ def rename_images_with_sequence(directory):  # pylint: disable=C0116
     # atp the images are named in the format of YYYY-MM-D or YYYY-MM-DD
     # Some of them have _01 or _1 if there are multiple images of the same day.
     date_groups = {}  # Dictionary to group files by date
+    renamed = 0
 
     for filename in os.listdir(directory):
         if filename.lower().endswith(('.jpg', '.jpeg')):
@@ -81,12 +82,17 @@ def rename_images_with_sequence(directory):  # pylint: disable=C0116
                 new_name += f"{os.path.splitext(filename)[1]}"
 
             new_path = os.path.join(directory, new_name)
+            if filepath != new_path:
+                renamed += 1
+                os.rename(filepath, new_path)
+                print(f"Renamed {filename} to {new_name}")
+            else:
+                print(f"{file_date} already processed.")
 
-            os.rename(filepath, new_path)
-            print(f"Renamed {filename} to {new_name}")
+    print(f"\n{renamed} files renamed.")
 
 
-# rename_images_with_sequence("./images")
+rename_images_with_sequence("./images")
 
 
 # def rename_images_with_sequence(directory):
