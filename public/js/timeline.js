@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         image.alt = item.title;
         image.loading = "lazy";
-        if (index < 3) {
-          // first 3 aren't lazy loaded
-          image.loading = "eager";
-        }
+        // if (index < 3) {
+        //   // first 3 aren't lazy loaded
+        //   image.loading = "eager";
+        // }
 
         image.width = 400;
         image.style.height = "auto";
