@@ -24,5 +24,6 @@ jobs:
           local_path: ./* # On Github
           remote_path: ${{ secrets.REMOTE_PATH }} # On server
           delete_remote_files: true
+          rsyncArgs: '--exclude=images/ --exclude=images_copy/'
           # sftp args
           args: "-o ConnectTimeout=5"
