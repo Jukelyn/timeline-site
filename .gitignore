@@ -4,7 +4,6 @@
 venv
 
 *DS_Store
-image_links.log
 secrets.txt
 thumbor.conf
 docker-compose.yaml

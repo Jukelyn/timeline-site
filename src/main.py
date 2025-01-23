@@ -122,9 +122,10 @@ with open("image_links.log", "w", encoding="utf-8") as log_file:
     sys.stdout = Tee(sys.stdout, log_file)
 
     for image in images:
-        filters = input(
-            f"Enter any filters for {image} with spaces between them: ")
-        filters = filters.split()
+        # filters = input(
+        #     f"Enter any filters for {image} with spaces between them: ")
+        # filters = filters.split()
+        filters = []
         filters.append("format(webp)")
 
         img_fullsize = get_url(f"{image}.jpg", 0, filters)
