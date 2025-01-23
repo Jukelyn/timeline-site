@@ -7,3 +7,6 @@ venv
 secrets.txt
 thumbor.conf
 docker-compose.yaml
+
+images/*
+!images/*.jpg
