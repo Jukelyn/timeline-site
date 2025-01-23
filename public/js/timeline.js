@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // const imageBaseName = item.imageSource.replace(/\.[^/.]+$/, ""); // Match, with dir, no extension
         // const imageExtension = item.imageSource.split(".").pop(); // extension
         // const imageNoDir = item.imageSource.split("/").pop(); // Match, no dir, with extension
-        image.src = item.imageSource;
+        image.src = item.imageSourceSmall;
         // image.src = `https://cdn.jukelyn.com/unsafe/400x0/${imageNoDir}`;
 
         imageSmall = item.imageSourceSmall;
