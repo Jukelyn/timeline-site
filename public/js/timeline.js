@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // }
 
         image.width = 400;
-        image.style.height = "auto";
+        image.style.aspectRatio = "auto";
+        // image.style.height = "auto";
 
         // Set up srcset for responsive image sources
         image.srcset = `${imageSmall} 400w, ${imageMedium} 800w, ${imageLarge} 1200w`;
