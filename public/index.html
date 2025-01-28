@@ -23,14 +23,11 @@
       sizes="16x16"
     />
     <link href="css/styles.css" rel="stylesheet" />
-    <script src="js/fade.js"></script>
-
+    <link rel="prefetch" href="../timelineData.json" as="fetch" />
   </head>
 
   <body>
-    <div class="snowfall-animation"></div>
-    <script src="js/snow.js"></script>
-
+    <script src="js/fade.js" defer></script>
     <div class="my_header" width="100%">
       <h1>our timeline.</h1>
     </div>
@@ -108,5 +105,8 @@
         />
       </svg>
     </a>
+
+    <div class="snowfall-animation"></div>
+    <script src="js/snow.js" defer></script>
   </body>
 </html>
